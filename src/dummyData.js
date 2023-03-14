@@ -2,52 +2,52 @@ export const Users = [
     {
       id:1,
       profilePicture: "assets/persons/1.jpg",
-      username: "Sofia jackson",
+      username: "Mohan Ranga",
     },
     {
       id:2,
       profilePicture: "assets/persons/2.jpg",
-      username: "Janell Shrum",
+      username: "Leeladhar",
     },
     {
       id:3,
       profilePicture: "assets/persons/3.jpg",
-      username: "Alex Durden",
+      username: "Vidhya Sri",
     },
     {
       id:4,
       profilePicture: "assets/persons/4.jpg",
-      username: "Dora Hawks",
+      username: "Sai Ramya ",
     },
     {
       id:5,
       profilePicture: "assets/persons/5.jpg",
-      username: "Thomas Holden",
+      username: "Sowmya",
     },
     {
       id:6,
       profilePicture: "assets/persons/6.jpg",
-      username: "Shirley Beauchamp",
+      username: "Bharath Vamsi",
     },
     {
       id:7,
       profilePicture: "assets/persons/7.jpg",
-      username: "Travis Bennett",
+      username: "Sai Manohar",
     },
     {
       id:8,
       profilePicture: "assets/persons/8.jpg",
-      username: "Kristen Thomas",
+      username: "Jeswanth Sonu",
     },
     {
       id:9,
       profilePicture: "assets/persons/9.jpg",
-      username: "Gary Duty",
+      username: "Yeswanth",
     },
     {
       id:10,
-      profilePicture: "assets/persons10.jpg",
-      username: "Angela Kocaoglu",
+      profilePicture: "assets/persons/10.jpg",
+      username: "Pavan Sai",
     },
   ];
 

@@ -1,78 +1,110 @@
 .post {
-    width: 100%;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68); 
-    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
-    margin: 30px 0;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  margin: 30px 0;
 }
 
 .postWrapper {
-    padding: 10px;
+  padding: 10px;
 }
 
 .postTop {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .postTopLeft {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .postProfileImg {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .postUsername {
-    font-size: 15px;
-    font-weight: 500;
-    margin: 0 10px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 10px;
 }
 
 .postDate {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .postCenter {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .postImg {
-    margin-top: 20px;
-    width: 100%;
-    max-height: 500px;
-    object-fit: contain;
+  margin-top: 20px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
 }
 
 .postBottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .postBottomLeft {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .likeIcon {
-    width: 24px;
-    height: 24px;
-    margin-right: 5px;
-    cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .postLikeCounter {
-    font-size: 15px;
+  font-size: 15px;
+  padding-left: 10px;
 }
 
 .postCommenttext {
-    cursor: pointer;
-    border-bottom: 1px dashed gray;
-    font-size: 15px;
+  cursor: pointer;
+  border-bottom: 1px dashed gray;
+  font-size: 15px;
+}
+.postone {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.commentone {
+  font-size: smaller;
+}
+.commenttwo {
+  background-color: rgb(231, 231, 231);
+  padding: 30px;
+  border-radius: 15px;
+}
+.selfcomment {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.selfcomment > input {
+  background-color: rgb(216, 216, 216);
+  width: 500px;
+  border-radius: 15px;
+  outline: none;
+  font-size: small;
+}
+.selfcomment > button {
+  background-color: rgb(83, 182, 243);
+  color: white;
+  width: 60px;
+  border-radius: 7px;
 }

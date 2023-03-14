@@ -81,4 +81,7 @@
     font-weight: 500;
     cursor: pointer;
 }
-
+.link{
+    text-decoration: none;
+    color: white;
+}
