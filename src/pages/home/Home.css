@@ -1,4 +1,13 @@
 .homeContainer {
+  display: flex;
+  width: 100%;
+}
+@media screen and (max-width: 888px) {
+  .homeContainer {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+  }
+  .sidebar{
+    display: none;
+  }
 }

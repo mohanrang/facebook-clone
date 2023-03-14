@@ -17,7 +17,9 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="logo">Facebook</span>
+        <span className="logo">
+          <Link to="/">Facebook</Link>
+        </span>
       </div>
       <div className="topbarCentre">
         <div className="searchbar">

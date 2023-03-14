@@ -133,7 +133,7 @@ export default function Post({ post }) {
       </Accordion>
       <div className="selfcomment">
         <img className="postProfileImg" src="/assets/persons/1.jpg" alt="" />
-        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;Write your comments"/>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;Write a comment..."/>
         <button>send</button>
       </div>
     </div>

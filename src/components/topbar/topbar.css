@@ -102,3 +102,9 @@
   color: black;
   cursor: pointer;
 }
+
+@media screen and (max-width: 888px) {
+  .topbarLinks{
+    display: none;
+  }
+}
