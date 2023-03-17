@@ -3,13 +3,13 @@ const connect = require("./DB/connect");
 const cors = require("cors");
 // const bcrypt = require("bcryptjs");
 const session = require("express-session");
-
 const router = require("./Router/Router");
 const app = express();
+const passport = require("passport");
 
 app.use(express.json());
 app.use(cors());
-
+app.use(passport.initialize());
 app.use(
   session({
     secret: "mohannaga",
@@ -20,7 +20,6 @@ app.use(
     },
   })
 );
-
 app.use(router);
 
 connect().then(

@@ -2,8 +2,15 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const User = require("../DB/model");
 const argon2 = require("argon2");
-const multer = require("multer");
-const Uploader = require("../DB/uploadmodel");
+const nodemailer = require("nodemailer");
+const passport = require("passport");
+const mailTransporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "mohanrangajagarapu9@gmail.com",
+    pass: "feabxxkqhhrnnweg",
+  },
+});
 
 const router = express.Router();
 
@@ -53,32 +60,58 @@ router.get("/", async (req, res) => {
   }
 });
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "public/images");
-  },
-  filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    cb(null, "img" + "-" + uniqueSuffix);
-  },
-});
-const upload = multer({ dest: storage });
+//gmail
 
-// router.post("/auth/upload", upload.single(), async (req, res) => {
-//   const img = req.file;
-//   const { text, email } = req.body;
-//   console.log(img, text, email);
-//   res.send(img);
-  // try {
-  //   const user = await Upload.findOne({ email: email });
-  //   if (user) {
-  //     const data = await Upload.updateOne({ text: text, img: img });
-  //   } else {
-  //     const data = await User.create({ email: email, text: text, img: img });
-  //   }
-  // } catch (error) {
-  //   res.status(500).send(error);
-  // }
+router.post("/auth/email", async (req, res) => {
+  const { email } = req.body;
+  // console.log(email);
+  const user = await User.findOne({ email: email });
+  if (user) {
+    const name = user.name;
+    let details = {
+      from: "mohanrangajagarapu9@gmail.com",
+      to: email,
+      subject: "984966 is your Facebook account recovery code",
+      text:
+        " Hi " +
+        name +
+        ",We received a request to reset your Facebook password. Enter the following password reset code: 984966",
+    };
+
+    mailTransporter.sendMail(details, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("email send");
+      }
+    });
+    return res.status(200).send("found");
+  } else {
+    res.status(400).send("not found");
+  }
+});
+
+//google
+// require("./Auth");
+// router.get(
+//   "/auth/google",
+//   passport.authenticate("google", { scope: ["profile"] })
+// );
+
+// router.get(
+//   "/auth/google/callback",
+//   passport.authenticate("google", { failureRedirect: "/auth/google/failure" }),
+//   function (req, res) {
+//     // Successful authentication, redirect home.
+//     res.redirect("/");
+//   }
+// );
+
+// router.get("/auth/google/success", (req, res) => {
+//   res.send("hello");
+// });
+// router.get("/auth/google/failure", (req, res) => {
+//   res.send("fail");
 // });
 
 module.exports = router;
